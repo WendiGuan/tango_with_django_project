@@ -23,8 +23,13 @@ def index(request):
 
 
 def about(request):
+    print(request.method)
+    
+    print(request.user)
 
-    return render(request, 'rango/about.html')
+    return render(request, 'rango/about.html', {})
+
+
 
 
 def show_category(request, category_name_slug):
